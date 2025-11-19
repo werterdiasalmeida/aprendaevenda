@@ -9,59 +9,52 @@
 
   <style>
     body {
-      background: linear-gradient(135deg, #FFEB3B, #FF5722, #4CAF50);
-      background-size: 300% 300%;
-      animation: gradientMove 10s ease infinite;
-      min-height: 100vh;
-      color: #222;
+      background: #f5f7fa;
       font-family: 'Segoe UI', sans-serif;
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .card-custom {
-      background: rgba(255,255,255,0.92);
-      border-radius: 22px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.18);
-      padding: 35px 50px;
+      color: #333;
     }
 
     .logo {
       font-size: 3rem;
-      color: #4CAF50;
-      text-shadow: 2px 2px rgba(0,0,0,0.15);
+      color: #FF5722;
+      margin-bottom: 15px;
     }
 
-    .produto-card {
+    .store-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .badge-course {
+      background: #4CAF50;
+      border-radius: 50px;
+      padding: 5px 12px;
+      color: white;
+      font-size: 0.85rem;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    .product-card {
       background: #fff;
       border-radius: 18px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
       padding: 20px;
+      text-align: center;
       transition: .3s;
     }
 
-    .produto-card:hover {
-      transform: scale(1.03);
+    .product-card:hover {
+      transform: translateY(-6px);
     }
 
-    .produto-img {
+    .product-img {
       width: 100%;
       height: 180px;
       object-fit: cover;
       border-radius: 12px;
       margin-bottom: 15px;
-    }
-
-    .badge-curso {
-      background: #FF5722;
-      border-radius: 50px;
-      padding: 5px 12px;
-      color: white;
-      font-size: 0.85rem;
     }
 
     .btn-whats {
@@ -73,73 +66,74 @@
     }
 
     .btn-whats:hover {
-      opacity: .85;
       transform: scale(1.05);
+      opacity: .9;
+    }
+
+    h4 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #FF5722;
     }
   </style>
 </head>
 <body>
 
-<div class="container py-5 d-flex justify-content-center">
-  <div class="card-custom col-lg-10">
+<div class="container py-5">
 
-    <!-- LOGO DA LOJA -->
-    <div class="text-center mb-4">
-      <div class="logo"><i class="bi bi-shop"></i></div>
-      <h1 class="mt-2">Loja do Artesão</h1>
-      <p class="lead">Produtos artesanais criados por quem aprendeu com a plataforma Aprenda & Venda</p>
-    </div>
-
-    <!-- CURSOS CONCLUÍDOS -->
-    <h4 class="fw-bold mt-4">Cursos concluídos pelo vendedor</h4>
-    <p class="text-muted">Estes cursos certificam que o artesão aprendeu as técnicas para criar os produtos abaixo.</p>
-
-    <div class="d-flex gap-2 flex-wrap mb-4">
-      <span class="badge-curso"><i class="bi bi-award-fill me-1"></i>Cerâmica Artesanal</span>
-      <span class="badge-curso"><i class="bi bi-award-fill me-1"></i>Doces Tradicionais</span>
-      <span class="badge-curso"><i class="bi bi-award-fill me-1"></i>Tecelagem Básica</span>
-    </div>
-
-    <!-- LISTA DE PRODUTOS -->
-    <div class="row g-4 mt-2">
-
-      <div class="col-md-4">
-        <div class="produto-card text-center">
-          <img src="https://images.unsplash.com/photo-1601049676869-952a3801f9ab" class="produto-img" alt="Cesto artesanal">
-          <h5 class="fw-bold">Cesto Artesanal</h5>
-          <p class="text-muted">Feito à mão com fibras naturais.</p>
-          <p class="fw-bold">R$ 45,00</p>
-          <a href="#" class="btn btn-whats"><i class="bi bi-whatsapp me-1"></i>Chamar no WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="produto-card text-center">
-          <img src="https://images.unsplash.com/photo-1543352634-7e7b3ee1d87f" class="produto-img" alt="Doce artesanal">
-          <h5 class="fw-bold">Doce de Festa</h5>
-          <p class="text-muted">Receita tradicional aprendida no curso.</p>
-          <p class="fw-bold">R$ 20,00</p>
-          <a href="#" class="btn btn-whats"><i class="bi bi-whatsapp me-1"></i>Chamar no WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="produto-card text-center">
-          <img src="https://images.unsplash.com/photo-1602524819209-389e7dfb82fb" class="produto-img" alt="Pote decorado">
-          <h5 class="fw-bold">Pote Decorado</h5>
-          <p class="text-muted">Peça de cerâmica trabalhada à mão.</p>
-          <p class="fw-bold">R$ 75,00</p>
-          <a href="#" class="btn btn-whats"><i class="bi bi-whatsapp me-1"></i>Chamar no WhatsApp</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="text-center mt-5">
-      <a href="index.html" class="btn btn-dark px-4 py-2">Voltar à Página Inicial</a>
-    </div>
-
+  <!-- LOGO E HEADER -->
+  <div class="store-header">
+    <div class="logo"><i class="bi bi-shop"></i></div>
+    <h1>Loja do Artesão</h1>
+    <p>Produtos artesanais criados por quem aprendeu com a plataforma Aprenda & Venda</p>
   </div>
+
+  <!-- CURSOS CONCLUÍDOS -->
+  <h4>Cursos Concluídos pelo Vendedor</h4>
+  <p class="text-muted">Estes cursos certificam que o artesão aprendeu as técnicas para criar os produtos abaixo.</p>
+  <div>
+    <span class="badge-course"><i class="bi bi-award-fill me-1"></i>Cerâmica Artesanal</span>
+    <span class="badge-course"><i class="bi bi-award-fill me-1"></i>Doces Tradicionais</span>
+    <span class="badge-course"><i class="bi bi-award-fill me-1"></i>Tecelagem Básica</span>
+  </div>
+
+  <!-- LISTA DE PRODUTOS -->
+  <div class="row g-4 mt-3">
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1601049676869-952a3801f9ab" class="product-img" alt="Cesto artesanal">
+        <h5>Cesto Artesanal</h5>
+        <p class="text-muted">Feito à mão com fibras naturais.</p>
+        <p class="fw-bold">R$ 45,00</p>
+        <a href="#" class="btn btn-whats"><i class="bi bi-whatsapp me-1"></i>Chamar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1543352634-7e7b3ee1d87f" class="product-img" alt="Doces Tradicionais">
+        <h5>Doces Tradicionais</h5>
+        <p class="text-muted">Receita tradicional aprendida no curso.</p>
+        <p class="fw-bold">R$ 20,00</p>
+        <a href="#" class="btn btn-whats"><i class="bi bi-whatsapp me-1"></i>Chamar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1602524819209-389e7dfb82fb" class="product-img" alt="Pote Decorado">
+        <h5>Pote Decorado</h5>
+        <p class="text-muted">Peça de cerâmica trabalhada à mão.</p>
+        <p class="fw-bold">R$ 75,00</p>
+        <a href="#" class="btn btn-whats"><i class="bi bi-whatsapp me-1"></i>Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="index.html" class="btn btn-dark px-4 py-2">Voltar à Página Inicial</a>
+  </div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,123 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Curso - Aprenda e Venda</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos | Aprenda e Venda</title>
 
-  <style>
-    body {
-      background: linear-gradient(135deg, #FFEB3B, #FF5722, #4CAF50);
-      background-size: 300% 300%;
-      animation: gradientMove 10s ease infinite;
-      min-height: 100vh;
-      color: #222;
-      font-family: 'Segoe UI', sans-serif;
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+    <style>
+        body {
+            background: #f7f9fc;
+            font-family: "Segoe UI", sans-serif;
+            color: #333;
+        }
 
-    .card-custom {
-      background: rgba(255,255,255,0.92);
-      border-radius: 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-      padding: 40px 55px;
-    }
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-    .logo {
-      font-size: 3rem;
-      color: #E91E63;
-      text-shadow: 2px 2px rgba(0,0,0,0.15);
-    }
+        .hero h1 {
+            font-weight: 800;
+            font-size: 2.8rem;
+            color: #0d6efd;
+        }
 
-    .mod-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
-      transition: .3s;
-    }
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+        }
 
-    .mod-card:hover {
-      transform: scale(1.03);
-    }
+        .course-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
 
-    .mod-icon {
-      font-size: 2.5rem;
-      color: #FF5722;
-      margin-bottom: 10px;
-    }
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
 
-    .btn-acessar {
-      background: #4CAF50;
-      color: white;
-      border-radius: 30px;
-      padding: 10px 20px;
-      transition: .3s;
-    }
+        .course-icon {
+            font-size: 3rem;
+            color: #ff5722;
+            margin-bottom: 12px;
+        }
 
-    .btn-acessar:hover {
-      transform: scale(1.05);
-      opacity: .9;
-    }
-  </style>
+        .module-badge {
+            display: inline-block;
+            background: #198754;
+            color: #fff;
+            border-radius: 50px;
+            padding: 4px 12px;
+            font-size: 0.85rem;
+            margin: 3px 2px;
+        }
+
+        .btn-access {
+            border-radius: 30px;
+            padding: 10px 22px;
+            background: #0d6efd;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .btn-access:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container py-5 d-flex justify-content-center">
-  <div class="card-custom col-lg-9">
+    <!-- HERO -->
+    <section class="hero">
+        <i class="bi bi-easel2-fill text-warning" style="font-size:4rem;"></i>
+        <h1 class="mt-3">Cursos Disponíveis</h1>
+        <p>Aprenda habilidades práticas, ganhe selos de certificação e mostre na sua loja.</p>
+    </section>
 
-    <div class="text-center mb-4">
-      <div class="logo"><i class="bi bi-easel-fill"></i></div>
-      <h1 class="mt-2">Cerâmica Artesanal</h1>
-      <p class="lead">Aprenda técnicas tradicionais e produza suas próprias peças para vender.</p>
+    <div class="container py-5">
+        <div class="row g-4">
+
+            <!-- Curso 1 -->
+            <div class="col-md-4">
+                <div class="course-card text-center">
+                    <div class="course-icon"><i class="bi bi-brush-fill"></i></div>
+                    <h4>Cerâmica Artesanal</h4>
+                    <p class="text-muted">Aprenda a modelar, queimar e finalizar suas peças de cerâmica.</p>
+                    <div class="mt-3">
+                        <span class="module-badge">Introdução</span>
+                        <span class="module-badge">Modelagem</span>
+                        <span class="module-badge">Queima</span>
+                        <span class="module-badge">Acabamento</span>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-access">Ver Curso</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 2 -->
+            <div class="col-md-4">
+                <div class="course-card text-center">
+                    <div class="course-icon"><i class="bi bi-basket3-fill"></i></div>
+                    <h4>Doces Tradicionais</h4>
+                    <p class="text-muted">Aprenda receitas deliciosas e técnicas para venda de doces caseiros.</p>
+                    <div class="mt-3">
+                        <span class="module-badge">Ingredientes</span>
+                        <span class="module-badge">Preparo</span>
+                        <span class="module-badge">Embalagem</span>
+                        <span class="module-badge">Venda</span>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-access">Ver Curso</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 3 -->
+            <div class="col-md-4">
+                <div class="course-card text-center">
+                    <div class="course-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                    <h4>Tecelagem Básica</h4>
+                    <p class="text-muted">Aprenda a criar peças têxteis artesanais e técnicas de acabamento.</p>
+                    <div class="mt-3">
+                        <span class="module-badge">Materiais</span>
+                        <span class="module-badge">Trama</span>
+                        <span class="module-badge">Padrões</span>
+                        <span class="module-badge">Finalização</span>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-access">Ver Curso</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Certificação / Visual Moodle -->
+        <div class="text-center mt-5">
+            <h3><i class="bi bi-award-fill text-warning"></i> Certificação e Visual Final</h3>
+            <p class="text-muted">Após concluir os módulos, o curso exibe selos de certificação visual no Moodle, que aparecem na sua vitrine.</p>
+            <img src="https://via.placeholder.com/600x300?text=Exemplo+Visual+do+Curso+no+Moodle" class="img-fluid mt-3 rounded shadow-sm" alt="Visual Moodle">
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary btn-lg"><i class="bi bi-arrow-left"></i> Voltar à Página Inicial</a>
+        </div>
     </div>
 
-    <h4 class="fw-bold mt-4">Módulos do Curso</h4>
-    <div class="row g-4 mt-1">
-
-      <div class="col-md-4">
-        <div class="mod-card text-center">
-          <div class="mod-icon"><i class="bi bi-brush-fill"></i></div>
-          <h5 class="fw-bold">Introdução & Materiais</h5>
-          <p class="text-muted">Conheça os insumos e ferramentas básicas.</p>
-          <a href="#" class="btn btn-acessar">Acessar</a>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="mod-card text-center">
-          <div class="mod-icon"><i class="bi bi-palette-fill"></i></div>
-          <h5 class="fw-bold">Modelagem Manual</h5>
-          <p class="text-muted">Aprenda a dar forma à argila com as mãos.</p>
-          <a href="#" class="btn btn-acessar">Acessar</a>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="mod-card text-center">
-          <div class="mod-icon"><i class="bi bi-fire"></i></div>
-          <h5 class="fw-bold">Cura & Queima</h5>
-          <p class="text-muted">Finalização profissional das peças.</p>
-          <a href="#" class="btn btn-acessar">Acessar</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="mt-5 text-center">
-      <a href="index.html" class="btn btn-dark px-4 py-2">Voltar à Página Inicial</a>
-    </div>
-
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
